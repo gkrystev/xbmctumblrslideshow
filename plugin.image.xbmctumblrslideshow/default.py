@@ -47,7 +47,7 @@ def listimages(tumblr):
 	if len(posts) >= 20:
 		thumbnail = 'http://api.tumblr.com/v2/blog/%s.tumblr.com/avatar/256' % tumblr
 		listitem = xbmcgui.ListItem('Next Page (%d - %d)' % (start + 20, start + 40), iconImage=thumbnail)
-		url = plugin.root + plugin.path + '?start=' + str(start + 20)
+		url = plugin.root + "/" + plugin.path + '?start=' + str(start + 20)
 		plugin.addDirectoryItem(url=url, listitem=listitem,isFolder=True)
 	post_index = start
 	for post in posts:
